@@ -78,8 +78,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
+# production:
+#   <<: *default
+#   database: GoalsII-api_production
+#   username: GoalsII-api
+#   password: <%= ENV['GOALSII-API_DATABASE_PASSWORD'] %>
+
+development:
   <<: *default
-  database: GoalsII-api_production
-  username: GoalsII-api
-  password: <%= ENV['GOALSII-API_DATABASE_PASSWORD'] %>
+  database: database_name
+  username: learn
+  password: 'password'
